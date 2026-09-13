@@ -75,7 +75,62 @@ def menu():
         elif opcion == 2:
 
             print("SÓLIDOS REGULARES")
-            print("Esta parte será realizada por el otro integrante.")
+            print("1. Cubo")
+            print("2. Prisma")
+            print("3. Cilindro")
+            print("4. Esfera")
+            print("5. Cono")
+
+            figura = int(input("Seleccione un sólido regular: "))
+
+            if figura == 1:
+
+                cubeLado = int(input("Ingrese el lado del cubo: "))
+                cubeVolume = cubeLado * 3
+
+                print("Volumen:", cubeVolume)
+
+            elif figura == 2:
+
+                prismLargo = int(input("Ingrese el largo del prisma: "))
+                prismAncho = int(input("Ingrese el ancho del prisma: "))
+                prismAlto = int(input("Ingrese el alto del prisma: "))
+
+                prismVolume = prismLargo * prismAncho * prismAlto
+
+                print("Volumen del prisma:", prismVolume)
+
+            elif figura == 3:
+
+                Pi = 3.1416
+                cilinderRadio = int(input("Ingrese el radio del cilindro: "))
+                cilinderAlto = int(input("Ingrese la altura del cilindro: "))
+
+                cilinderVolume = Pi * cilinderRadio * 2 * cilinderAlto
+
+                print("Volumen del cilindro:", cilinderVolume)
+
+            elif figura == 4:
+
+                Pi = 3.1416
+                sphereRadio = int(input("Ingrese el radio de la esfera: "))
+
+                sphereVolume = (4 * Pi * sphereRadio * 3) / 3
+
+                print("Volumen de la esfera:", sphereVolume)
+
+            elif figura == 5:
+
+                Pi = 3.1416
+                coneRadio = int(input("Ingrese el radio del cono: "))
+                coneAlto = int(input("Ingrese la altura del cono: "))
+
+                coneVolume = (Pi * coneRadio * 2 * coneAlto) / 3
+
+                print("Volumen del cono:", coneVolume)
+
+            else:
+                print("Sólido no válido")
 
         elif opcion == 3:
 
@@ -96,4 +151,3 @@ def menu():
 
 
 menu()
-
